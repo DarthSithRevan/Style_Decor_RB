@@ -1,1 +1,869 @@
+<!DOCTYPE html>
+<html lang="bg" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Decor RB | Прецизно сухо строителство и ремонт на бани</title>
+    <meta name="description" content="Style Decor RB - Професионално сухо строителство, окачени тавани, скрито LED осветление и цялостни луксозни ремонти на бани.">
+    
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#121417',
+                            darker: '#0B0C0E',
+                            charcoal: '#1C1F24',
+                            gold: '#C89B3C',
+                            goldHover: '#B0852C',
+                            light: '#F8F9FA',
+                            muted: '#8E95A2'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom subtle architectural grid pattern */
+        .bg-arch-grid {
+            background-image: radial-gradient(rgba(200, 155, 60, 0.12) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        .glass-nav {
+            background: rgba(18, 20, 23, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-gold selection:text-white overflow-x-hidden">
 
+    <!-- 1. STICKY HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#top" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center group-hover:bg-brand-gold transition-colors duration-300">
+                        <svg class="w-6 h-6 text-brand-gold group-hover:text-brand-dark transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-lg sm:text-xl tracking-wider text-white leading-none">
+                            STYLE DECOR <span class="text-brand-gold">RB</span>
+                        </span>
+                        <span class="text-[11px] uppercase tracking-[0.2em] text-brand-muted mt-1">Сухо строителство & Бани</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Услуги</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Проекти</a>
+                    <a href="#process" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Предимства</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-brand-gold transition-colors">Контакти</a>
+                </nav>
+
+                <!-- Desktop CTAs -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Style Decor RB"
+                       class="p-2.5 rounded-lg border border-white/15 text-gray-300 hover:text-brand-gold hover:border-brand-gold/50 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-lg bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-semibold text-sm transition-all shadow-lg shadow-brand-gold/20">
+                        Запитване
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Отвори меню">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-charcoal border-b border-white/10 px-4 pt-2 pb-6 space-y-2">
+            <a href="#services" class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-gray-200 hover:bg-white/5 hover:text-brand-gold">Услуги</a>
+            <a href="#projects" class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-gray-200 hover:bg-white/5 hover:text-brand-gold">Проекти</a>
+            <a href="#process" class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-gray-200 hover:bg-white/5 hover:text-brand-gold">Предимства</a>
+            <a href="#contact" class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-gray-200 hover:bg-white/5 hover:text-brand-gold">Контакти</a>
+            <div class="pt-3 flex flex-col gap-3">
+                <a href="#contact" class="mobile-link w-full text-center py-3 rounded-lg bg-brand-gold text-brand-dark font-bold text-sm">
+                    Безплатен оглед и оферта
+                </a>
+                <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer"
+                   class="w-full flex items-center justify-center gap-2 py-3 rounded-lg border border-white/20 text-white font-medium text-sm hover:border-brand-gold">
+                    <span>Instagram @style_decor_rb</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="top" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 bg-brand-dark text-white overflow-hidden">
+        <!-- Background Image with Dark Architectural Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1920&q=80" 
+                 onerror="this.style.display='none'"
+                 alt="Луксозен интериор и баня" 
+                 class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-brand-dark/75"></div>
+            <div class="absolute inset-0 bg-arch-grid"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <!-- Architectural Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-xs sm:text-sm font-semibold tracking-wide mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                    <span>ЕКСПЕРТИ В ДОВЪРШИТЕЛНИТЕ РЕМОНТИ</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight mb-6">
+                    Прецизно сухо строителство и цялостни <span class="text-brand-gold">ремонти на бани</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
+                    Превръщаме интериорните идеи в безкомпромисна реалност. Чисто изпълнение, модерни архитектурни решения със скрито осветление, широкоформатен гранитогрес и гарантирано качество до последния детайл.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-14">
+                    <a href="#contact" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-heading font-bold text-sm sm:text-base transition-all shadow-xl shadow-brand-gold/20 hover:-translate-y-0.5">
+                        <span>Безплатен оглед и оферта</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/20 hover:border-brand-gold/60 text-white font-semibold text-sm sm:text-base transition-all">
+                        <svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span>Разгледай в Instagram</span>
+                    </a>
+                </div>
+
+                <!-- Key Trust Metrics -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/15">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-white text-base">100% Прецизност</div>
+                            <div class="text-xs text-brand-muted">Лазерно нивелиране и равнини</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-white text-base">Гаранция за качество</div>
+                            <div class="text-xs text-brand-muted">Сертифицирани системи и материали</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-white text-base">Спазване на срокове</div>
+                            <div class="text-xs text-brand-muted">Ясен график и чист обект</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION (УСЛУГИ) -->
+    <section id="services" class="py-20 lg:py-28 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-heading font-bold text-xs uppercase tracking-[0.2em]">Нашите специализации</span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-dark mt-2 mb-4">
+                    Професионални строителни и ремонтни услуги
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Изпълняваме всеки етап с внимание към конструктивната здравина, перфектната геометрия и съвременната естетика.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Сухо строителство -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-200/80 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center mb-6 group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-brand-dark mb-3">Сухо строителство</h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                            Модерни гипсокартонени конструкции с висока шумо- и топлоизолация, изпълнени по стандартите на Knauf и Rigips.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-700 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Окачени тавани (прави, на нива и фигурални)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Преградни стени с каменна вата и шумоизолация</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Предстенни обшивки и куфари за инсталации</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Ниши за скрито LED осветление и корнизи</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Фина шпакловка (ниво Q1–Q4) и боядисване</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-service="Сухо строителство" class="select-service-btn inline-flex items-center gap-2 text-sm font-heading font-bold text-brand-dark group-hover:text-brand-gold transition-colors">
+                        <span>Заяви оферта за сухо строителство</span>
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <!-- Card 2: Цялостен ремонт на бани (Featured) -->
+                <div class="bg-brand-dark text-white rounded-2xl p-8 shadow-xl border-2 border-brand-gold/60 relative flex flex-col justify-between group">
+                    <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-brand-gold text-brand-dark font-heading font-bold text-xs uppercase tracking-wider">
+                        Най-търсена услуга
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-gold text-brand-dark flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3">Цялостен ремонт на бани</h3>
+                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                            Изграждане на баня „до ключ“ с безкомпромисна хидроизолация, прецизно рязане под 45° и модерен дизайн.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-200 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Къртене, почистване и извозване на отпадъци</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Изграждане и подмяна на ВиК и Ел. инсталации</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Двукомпонентна хидроизолация и хидроизолационни ленти</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Лепене на фаянс, теракот и широкоформатен гранитогрес</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Монтаж на вградени структури, линейни сифони и санитария</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-service="Ремонт на баня" class="select-service-btn inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-brand-dark text-sm font-heading font-bold transition-colors">
+                        <span>Заяви оглед за ремонт на баня</span>
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <!-- Card 3: Интериорни решения и довършителни работи -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-200/80 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center mb-6 group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-brand-dark mb-3">Интериорни решения</h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                            Цялостни довършителни работи, които придават завършен и луксозен вид на вашия дом или офис.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-700 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Декоративни мазилки и акцентни стени</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Прецизно обръщане на врати и прозорци</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Изравнителни замазки и подготовка на подове</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Интегриране на магнитни релси и лунички</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-brand-gold font-bold mt-0.5">✓</span>
+                                <span>Цялостно обновяване на апартаменти до ключ</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" data-service="Комплексен ремонт" class="select-service-btn inline-flex items-center gap-2 text-sm font-heading font-bold text-brand-dark group-hover:text-brand-gold transition-colors">
+                        <span>Заяви оферта за комплексен ремонт</span>
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PORTFOLIO / INSTAGRAM SHOWCASE SECTION (НАШИТЕ ПРОЕКТИ) -->
+    <section id="projects" class="py-20 lg:py-28 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header + Filter Controls -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-brand-gold font-heading font-bold text-xs uppercase tracking-[0.2em]">Портфолио</span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-2">
+                        Реализирани проекти и детайли
+                    </h2>
+                </div>
+
+                <!-- Interactive Category Filters -->
+                <div class="inline-flex flex-wrap gap-2 bg-brand-charcoal p-1.5 rounded-xl border border-white/10">
+                    <button type="button" data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold bg-brand-gold text-brand-dark transition-all">
+                        Всички
+                    </button>
+                    <button type="button" data-filter="bath" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-gray-300 hover:text-white transition-all">
+                        Бани
+                    </button>
+                    <button type="button" data-filter="drywall" class="filter-btn px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold text-gray-300 hover:text-white transition-all">
+                        Сухо строителство
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+                
+                <!-- Project 1 -->
+                <article data-category="bath" class="project-card group relative rounded-2xl overflow-hidden bg-brand-charcoal border border-white/10 shadow-lg">
+                    <div class="aspect-[16/10] overflow-hidden relative bg-brand-darker">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80" 
+                             onerror="this.src='https://placehold.co/800x500/1C1F24/C89B3C?text=Модерна+баня+с+гранитогрес'"
+                             alt="Модерна баня с широкоформатен гранитогрес" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-xs font-semibold">
+                            Ремонт на баня
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-7">
+                        <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-gold transition-colors">
+                            Модерна баня с широкоформатен гранитогрес
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Цялостно изпълнение с плочи 120x60 см, пилене на външни ръбове под 45 градуса, вградена структура и скрита LED ниша за козметика.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article data-category="drywall" class="project-card group relative rounded-2xl overflow-hidden bg-brand-charcoal border border-white/10 shadow-lg">
+                    <div class="aspect-[16/10] overflow-hidden relative bg-brand-darker">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" 
+                             onerror="this.src='https://placehold.co/800x500/1C1F24/C89B3C?text=Окачен+таван+със+скрито+LED+осветление'"
+                             alt="Окачен таван със скрито LED осветление" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-xs font-semibold">
+                            Сухо строителство
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-7">
+                        <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-gold transition-colors">
+                            Окачен таван със скрито LED осветление
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Двустепенен окачен таван от гипсокартон с вграден алуминиев LED профил, скрит корниз за завеси и шпакловка ниво Q4.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article data-category="bath" class="project-card group relative rounded-2xl overflow-hidden bg-brand-charcoal border border-white/10 shadow-lg">
+                    <div class="aspect-[16/10] overflow-hidden relative bg-brand-darker">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80" 
+                             onerror="this.src='https://placehold.co/800x500/1C1F24/C89B3C?text=Минималистична+душ+зона+с+линеен+сифон'"
+                             alt="Минималистична душ зона с линейни сифони" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-xs font-semibold">
+                            Ремонт на баня
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-7">
+                        <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-gold transition-colors">
+                            Минималистична душ зона с линейни сифони
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Изграждане на наклон с прецизно отводняване, линеен сифон с вложка за плочка, параван от закалено стъкло и черна матова санитария.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article data-category="drywall" class="project-card group relative rounded-2xl overflow-hidden bg-brand-charcoal border border-white/10 shadow-lg">
+                    <div class="aspect-[16/10] overflow-hidden relative bg-brand-darker">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" 
+                             onerror="this.src='https://placehold.co/800x500/1C1F24/C89B3C?text=Преградни+стени+и+топлоизолация'"
+                             alt="Преградни стени и топлоизолация" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-dark/80 backdrop-blur-md border border-brand-gold/40 text-brand-gold text-xs font-semibold">
+                            Сухо строителство
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-7">
+                        <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-gold transition-colors">
+                            Преградни стени и топлоизолация
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Акустични преградни стени с двойна обшивка гипсокартон, плътна каменна вата и декоративна ТВ стена с интегрирано осветление.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Instagram Call-to-Action Banner -->
+            <div class="rounded-2xl bg-gradient-to-r from-brand-charcoal via-[#23272E] to-brand-charcoal border border-brand-gold/40 p-8 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-5">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 p-0.5 shrink-0">
+                        <div class="w-full h-full bg-brand-dark rounded-[14px] flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mb-1.5">
+                            Следете актуалните ни обекти в реално време в Instagram @style_decor_rb
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base">
+                            Вижте видеа от работния процес, „преди и след“ трансформации и завършени детайли директно от нашите обекти.
+                        </p>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer"
+                   class="shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-heading font-bold text-sm transition-all shadow-lg shadow-brand-gold/20">
+                    <span>Последвай @style_decor_rb</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US / WORK PROCESS (КАК РАБОТИМ) -->
+    <section id="process" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-heading font-bold text-xs uppercase tracking-[0.2em]">Прозрачен процес</span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-dark mt-2 mb-4">
+                    Как работим по вашия проект
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Ясна организация от първоначалния оглед до предаването на напълно завършения и почистен обект.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative p-7 rounded-2xl bg-brand-light border border-gray-200/80 hover:border-brand-gold transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold font-heading font-extrabold text-xl flex items-center justify-center mb-5">
+                        01
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brand-dark mb-2.5">Оглед и консултация</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Посещаваме обекта на място, взимаме точни размери и обсъждаме най-добрите технически и дизайнерски решения.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative p-7 rounded-2xl bg-brand-light border border-gray-200/80 hover:border-brand-gold transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold font-heading font-extrabold text-xl flex items-center justify-center mb-5">
+                        02
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brand-dark mb-2.5">Детайлна оферта и бюджет</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Изготвяме ясна, структурирана количествено-стойностна сметка без скрити разходи и с фиксирани етапи на плащане.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative p-7 rounded-2xl bg-brand-light border border-gray-200/80 hover:border-brand-gold transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-dark text-brand-gold font-heading font-extrabold text-xl flex items-center justify-center mb-5">
+                        03
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brand-dark mb-2.5">Професионално изпълнение</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Работим с висок клас материали и професионална техника, като поддържаме ред и чистота на обекта всеки ден.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative p-7 rounded-2xl bg-brand-light border border-gray-200/80 hover:border-brand-gold transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold text-brand-dark font-heading font-extrabold text-xl flex items-center justify-center mb-5">
+                        04
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-brand-dark mb-2.5">Издаване на обекта в срок</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Предаваме завършения ремонт в уговорения срок, с проверка на всеки детайл и гаранция за извършената работа.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CONTACT & QUOTE FORM SECTION (ЗАПИТВАНЕ ЗА ОФЕРТА) -->
+    <section id="contact" class="py-20 lg:py-28 bg-brand-light border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Direct Info & Instagram Card -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-gold font-heading font-bold text-xs uppercase tracking-[0.2em]">Свържете се с нас</span>
+                        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-dark mt-2 mb-4">
+                            Готови ли сте да започнем вашия ремонт?
+                        </h2>
+                        <p class="text-gray-600 text-base leading-relaxed">
+                            Изпратете запитване през формата или ни пишете директно в Instagram. Ще се свържем с вас за уточняване на удобно време за оглед.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contact Card -->
+                    <div class="bg-brand-dark text-white rounded-2xl p-7 sm:p-8 shadow-xl space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0 text-brand-gold">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-brand-muted mb-1">Instagram профил</div>
+                                <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer"
+                                   class="font-heading font-bold text-lg text-white hover:text-brand-gold transition-colors">
+                                    @style_decor_rb
+                                </a>
+                                <p class="text-xs text-gray-400 mt-0.5">Бърз отговор на директни съобщения</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 pt-5 border-t border-white/10">
+                            <div class="w-11 h-11 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0 text-brand-gold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-brand-muted mb-1">Район на дейност</div>
+                                <div class="font-heading font-bold text-base text-white">София и региона / България</div>
+                                <p class="text-xs text-gray-400 mt-0.5">Възможност за изпълнение на обекти в страната</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 pt-5 border-t border-white/10">
+                            <div class="w-11 h-11 rounded-xl bg-brand-gold/15 border border-brand-gold/30 flex items-center justify-center shrink-0 text-brand-gold">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-brand-muted mb-1">Работно време</div>
+                                <div class="font-heading font-bold text-base text-white">Понеделник – Събота: 08:30 – 19:00</div>
+                                <p class="text-xs text-gray-400 mt-0.5">Неделя: по предварителна уговорка</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Quote Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-2xl p-7 sm:p-10 shadow-lg border border-gray-200/90">
+                        <h3 class="font-heading font-bold text-2xl text-brand-dark mb-2">Запитване за оферта</h3>
+                        <p class="text-gray-500 text-sm mb-7">Попълнете кратка информация за вашия проект и ще се свържем с вас.</p>
+
+                        <form id="quote-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="client-name" class="block text-sm font-semibold text-gray-700 mb-1.5">Вашето име *</label>
+                                    <input type="text" id="client-name" name="name" required placeholder="напр. Иван Петров"
+                                           class="w-full px-4 py-3 rounded-xl border border-gray-300 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all">
+                                </div>
+                                <div>
+                                    <label for="client-phone" class="block text-sm font-semibold text-gray-700 mb-1.5">Телефон за връзка *</label>
+                                    <input type="tel" id="client-phone" name="phone" required placeholder="0888 123 456"
+                                           class="w-full px-4 py-3 rounded-xl border border-gray-300 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="service-type" class="block text-sm font-semibold text-gray-700 mb-1.5">Вид услуга *</label>
+                                    <select id="service-type" name="service" required
+                                            class="w-full px-4 py-3 rounded-xl border border-gray-300 text-brand-dark bg-white focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all">
+                                        <option value="Сухо строителство">Сухо строителство</option>
+                                        <option value="Ремонт на баня" selected>Ремонт на баня</option>
+                                        <option value="Комплексен ремонт">Комплексен ремонт</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="area-sqm" class="block text-sm font-semibold text-gray-700 mb-1.5">Приблизителна квадратура (кв.м)</label>
+                                    <input type="text" id="area-sqm" name="area" placeholder="напр. 6 кв.м баня / 45 кв.м таван"
+                                           class="w-full px-4 py-3 rounded-xl border border-gray-300 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="project-desc" class="block text-sm font-semibold text-gray-700 mb-1.5">Описание на проекта</label>
+                                <textarea id="project-desc" name="description" rows="4" placeholder="Опишете накратко какво планирате (напр. цялостен ремонт на баня с вградена структура, окачен таван със скрито осветление и др.)..."
+                                          class="w-full px-4 py-3 rounded-xl border border-gray-300 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                    class="w-full py-4 px-6 rounded-xl bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-heading font-bold text-base transition-all shadow-lg shadow-brand-gold/25 flex items-center justify-center gap-2">
+                                <span>Изпрати запитване за оферта</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
+                        </form>
+
+                        <!-- Instant Interactive Feedback Message (Hidden by default) -->
+                        <div id="form-feedback" class="hidden mt-6 p-5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                                    ✓
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-bold text-base text-emerald-950">Благодарим ви! Запитването е прието успешно.</h4>
+                                    <p id="feedback-details" class="text-sm text-emerald-800 mt-1 leading-relaxed"></p>
+                                    <div class="mt-3 pt-3 border-t border-emerald-200/80 flex flex-wrap items-center gap-3 text-xs">
+                                        <span>Можете да ни пишете и директно в Instagram:</span>
+                                        <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer"
+                                           class="font-bold underline text-emerald-950 hover:text-brand-goldHover">
+                                            @style_decor_rb →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-brand-darker text-gray-400 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+                <!-- Brand Summary -->
+                <div>
+                    <a href="#top" class="inline-flex items-center gap-2.5 mb-4">
+                        <span class="font-heading font-extrabold text-xl tracking-wider text-white">
+                            STYLE DECOR <span class="text-brand-gold">RB</span>
+                        </span>
+                    </a>
+                    <p class="text-sm leading-relaxed text-gray-400 max-w-sm">
+                        Специализирани в прецизно сухо строителство, архитектурни окачени тавани, скрито осветление и цялостни луксозни ремонти на бани.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-4">Бързи връзки</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Услуги и специализации</a></li>
+                        <li><a href="#projects" class="hover:text-brand-gold transition-colors">Реализирани проекти</a></li>
+                        <li><a href="#process" class="hover:text-brand-gold transition-colors">Как работим</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition-colors">Безплатен оглед и оферта</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Instagram -->
+                <div>
+                    <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-white mb-4">Последвайте ни</h4>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Разгледайте най-новите ни завършени бани и интериорни решения в Instagram.
+                    </p>
+                    <a href="https://www.instagram.com/style_decor_rb/" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-white/5 hover:bg-brand-gold hover:text-brand-dark border border-white/15 hover:border-brand-gold text-white font-semibold text-sm transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span>@style_decor_rb</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+                <p>&copy; <span id="current-year"></span> Style Decor RB. Всички права запазени.</p>
+                <p>Сухо строителство &bull; Цялостни ремонти на бани</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Set current year in footer
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // 2. Mobile Navigation Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                }
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
+            });
+
+            // 3. Portfolio Category Filter
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Update active button styling
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-brand-gold', 'text-brand-dark');
+                        b.classList.add('text-gray-300');
+                    });
+                    btn.classList.add('bg-brand-gold', 'text-brand-dark');
+                    btn.classList.remove('text-gray-300');
+
+                    // Filter cards
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // 4. Pre-select service when clicking service card CTAs
+            const serviceSelect = document.getElementById('service-type');
+            const serviceBtns = document.querySelectorAll('.select-service-btn');
+
+            serviceBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const chosenService = btn.getAttribute('data-service');
+                    if (serviceSelect && chosenService) {
+                        serviceSelect.value = chosenService;
+                    }
+                });
+            });
+
+            // 5. Interactive Quote Form Handling
+            const quoteForm = document.getElementById('quote-form');
+            const formFeedback = document.getElementById('form-feedback');
+            const feedbackDetails = document.getElementById('feedback-details');
+
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('client-name').value.trim();
+                    const phone = document.getElementById('client-phone').value.trim();
+                    const service = document.getElementById('service-type').value;
+                    const area = document.getElementById('area-sqm').value.trim();
+
+                    const areaText = area ? ` (${area})` : '';
+                    feedbackDetails.textContent = `${name}, получихме вашето запитване за „${service}“${areaText}. Екипът на Style Decor RB ще се свърже с вас на телефон ${phone} в най-кратък срок.`;
+
+                    formFeedback.classList.remove('hidden');
+                    quoteForm.reset();
+
+                    // Smoothly scroll feedback into view if needed
+                    formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
